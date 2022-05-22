@@ -1,0 +1,244 @@
+/* https://flatuicolors.com/palette/de */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    --ascent-color: #a55eea;
+    --background-color: #F8F8F8;
+    --gradient: linear-gradient(
+        45deg,
+        #845ec2,
+        #d65db1,
+        #ff6f91,
+        #ff9671,
+        #ffc75f,
+        #f9f871
+    );
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+header {
+    padding: .25em;
+    background-color: var(--ascent-color);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal {
+    border: 1px solid black; /* todo */
+    background-color: white; /* todo */
+    box-shadow: 0px 0px 23px -15px #000000DD;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 2em;
+}
+
+.modal h1 {
+    display: block;
+    border-bottom: 1px solid black;
+    margin-bottom: .5em;
+    padding-top: .5em;
+    margin: 0 0 .25em 0;
+    padding: 0;
+}
+
+.modal form > div {
+    margin-bottom: 1em;
+}
+
+.modal form > div > label {
+    display: block;
+}
+
+.modal form > div > input {
+    width: 100%;
+}
+
+.modal div.action {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid black;
+    margin-top: .5em;
+    padding-top: .5em;
+}
+
+
+
+input:invalid {
+    animation: shake 300ms;
+    color: red;
+}
+
+@keyframes shake {
+    25%{
+        transform: translateX(4px);
+    }
+
+    50%{
+        transform: translateX(-4px);
+    }
+
+    75%{
+        transform: translateX(4px);
+    }
+}
+
+.btn-save:hover {
+    cursor: pointer;
+    animation: transform 400ms;
+    background-position: right;
+    background-image: linear-gradient(to bottom right, red 0%, blue 100%);
+    transform: scale(1.1);
+}
+
+.btn-save {
+    background-image: var(--gradient);
+    background-position: left;
+    transition: background-position 1s;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.modal .material-symbols-outlined{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    border-radius: 50%;
+    background-color: #a55eea;
+    transition: all .3s;
+    cursor: pointer;
+    color: black;
+}
+
+.modal .material-symbols-outlined:hover {
+    background-color: red;
+}
+
+.modal:hover {
+    border-left: 2px solid #aeffb9;
+    border-top: 2px solid #aeffb9;
+    border-bottom: 2px solid #a091ff;
+    border-right: 2px solid #a091ff;
+}
+
+#text {
+    display: block;
+    color: #000;
+    font-weight: 300;
+    padding: 5px;
+}
+
+input {
+    caret-color: #a55eea;
+}
+
+.action-bar {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60px;
+    background: #353535;
+    line-height: 40px;
+    padding: 10px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.add-bar {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.container-data {
+    position: absolute;
+    top: 5rem;
+    left: 30rem;
+
+}
+
+
+.input-search-header {
+    background: #353535;
+    color: #fff;
+    outline: none;
+    border: none;
+    line-height: 40px;
+    width: 0px;
+    float: left;
+    font-size: 1em;
+    transition: 0.7s ease;
+}
+
+.search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #353535;
+    padding: 12px;
+    border-radius: 50%;
+    float: right;
+    color: #22ffc0;
+    transition: 0.4s ease;
+}
+
+.action-bar:hover > .input-search-header, 
+.input-search-header:focus {    
+    width: 240px;
+    margin: 0px 8px;
+}
+
+.action-bar:hover > .search-btn,
+.search-btn:focus + .search-btn {
+    background: #22ffc0;
+    color: #101010;
+}
+
+input {
+    background-color: #353535;
+    color: #22ffc0;
+}
+
+::placeholder{
+    color: #22ffc0;
+}
+
+.btn-add {  
+    background-color: #353535;
+    color: #22ffc0;
+    height: 40px;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 40%;
+}
+
+.btn-add:hover {
+    background-color: #845ec2;
+    color: #000;
+}
